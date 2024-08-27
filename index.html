@@ -11,12 +11,19 @@
             font-family: 'Helvetica Neue', Arial, sans-serif;
         }
 
+        .help-link{
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
         .hero-section {
             background-color: #800000;
             color: white;
-            padding: 50px 0;
+            padding: 70px 0;
             text-align: center;
             position: relative;
+            overflow: hidden;
         }
 
         .hero-section .btn {
@@ -26,12 +33,34 @@
             font-weight: bold;
         }
 
-        .hero-section img {
+        .hero-section .hero-image {
             position: absolute;
             right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            max-height: 100%;
+            top: 0;
+            bottom: 0;
+            width: 40%;
+            background-image: url('assets/img/landing_image\ 1.png');
+            background-size: cover;
+            background-position: center;
+            transform: skewX(-15deg);
+            transform-origin: left;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: left;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            right: 55%;
+            top: 0;
+            bottom: 0;
+            width: 100%;
+            background-color: #800000;
+            transform: skewX(-15deg);
+            transform-origin: left;
         }
 
         .header-section {
@@ -74,11 +103,314 @@
             font-weight: bold;
             margin-top: 30px;
         }
+
+        .about-section {
+            padding: 50px 0;
+            background-color: #fff;
+            /* Fond blanc */
+        }
+
+        .about-section h2 {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #800000;
+            /* Rouge similaire à l'image */
+            margin-bottom: 20px;
+        }
+
+        .about-section p {
+            font-size: 1.125rem;
+            color: #333;
+            /* Texte gris foncé */
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .providers-section {
+            padding: 50px 0;
+            background: linear-gradient(180deg, #bf0c0c, #8b0000);
+            /* Dégradé rouge */
+            color: #fff;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .providers-grid {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+        }
+
+        .provider-card {
+            background-color: #a00d0d;
+            /* Rouge foncé pour les cartes */
+            padding: 20px;
+            border-radius: 15px;
+            width: 30%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+
+        .provider-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .provider-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .image-placeholder {
+            background-color: #d8d8d8;
+            height: 150px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .card-content p {
+            margin-bottom: 20px;
+        }
+
+        .pagination-dots {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            margin: 0 5px;
+            background-color: #fff;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .dot.active {
+            background-color: #f2f2f2;
+            /* Couleur des points actifs */
+        }
+
+        .btn-read-more {
+            background-color: #fff;
+            color: #a00d0d;
+            padding: 10px 20px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        .btn-read-more:hover {
+            background-color: #f2f2f2;
+        }
+
+        .content-wrapper {
+            padding: 2rem;
+            background-color: #870000;
+        }
+
+        /* Section Hero */
+        .hero-sections {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 50px 0;
+        }
+
+        .hero-slider {
+            display: flex;
+            width: 80%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slide {
+            display: flex;
+            align-items: center;
+            width: 100%;
+        }
+
+        .slide img {
+            /* padding: 20px; */
+            width: 200px;
+            border-radius: 15px 0 0 15px;
+        }
+
+        .slide-text {
+            width: 50%;
+            padding: 20px;
+            color: #fff;
+            background: linear-gradient(180deg, #bf0c0c, #8b0000);
+            border-radius: 0 15px 15px 0;
+        }
+
+        .slide-text h3 {
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .slide-text p {
+            margin-bottom: 10px;
+        }
+
+        /* Section Partenaires */
+        .partners-section {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            margin-bottom: 40px;
+            color: #a00d0d;
+        }
+
+        .partners-slider {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .partner-logo img {
+            max-width: 150px;
+            max-height: 100px;
+        }
+
+        /* Section Pourquoi Devenir Prestataire */
+        .why-choose-us {
+            background: linear-gradient(180deg, #bf0c0c, #8b0000);
+            color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .why-choose-us h2 {
+            font-size: 1.75rem;
+            margin-bottom: 30px;
+        }
+
+        .why-choose-us ul {
+            list-style-type: disc;
+            padding-left: 20px;
+            margin-bottom: 30px;
+            text-align: left;
+            display: inline-block;
+        }
+
+        .why-choose-us ul li {
+            margin-bottom: 10px;
+        }
+
+        .why-choose-us form {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .why-choose-us input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: none;
+        }
+
+        .why-choose-us button {
+            padding: 10px 20px;
+            border-radius: 20px;
+            border: none;
+            background-color: #fff;
+            color: #a00d0d;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+
+        .why-choose-us button:hover {
+            background-color: #f2f2f2;
+        }
+
+
+        .form-container {
+            /* background-color: #a00000; */
+            padding: 2rem;
+            border-radius: 8px;
+        }
+
+        .form-control {
+            border-radius: 50px;
+            padding: 0.5rem 1rem;
+        }
+
+        .btn-submit {
+            background-color: #888c8f;
+            color: white;
+            border-radius: 50px;
+            padding: 0.5rem 1.5rem;
+            border: none;
+            margin-top: 1rem;
+        }
+
+        footer {
+            /* background-color: #460404; */
+            padding: 2rem;
+            color: white;
+            text-align: center;
+            margin-top: 2rem;
+        }
+
+        .footer-logo {
+            width: 50px;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links {
+            text-align: left;
+            margin-bottom: 1rem;
+        }
+
+        .footer-links h5 {
+            margin-bottom: 1rem;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-links a:hover {
+            text-decoration: underline;
+        }
+
+        .footer-copyright {
+            margin-top: 1rem;
+        }
     </style>
 </head>
 
 <body>
     <header class="header-section">
+        <div class="d-flex justify-content-end">
+            <a href="#" class="help-link me-5"> Besoin d'aide ?</a>
+        </div>
         <nav class="navbar navbar-expand-lg navbar-light">
             <div class="container">
                 <a class="navbar-brand" href="#">Logo</a>
@@ -119,28 +451,189 @@
     </header>
 
     <section class="hero-section">
+        <div class="hero-overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
                     <div class="hero-content">
                         <h1>Assistance routière rapide et fiable.</h1>
-                        <p>Découvrez MsaAda AfriKa, la plateforme numérique qui vous offre une assistance routière rapide
+                        <p>Découvrez MsaAda AfriKa, la plateforme numérique qui vous offre une assistance routière
+                            rapide
                             et fiable partout en Afrique.</p>
-                        <a href="#" class="btn btn-light">Devenir Prestataire</a>
-                        <a href="#" class="btn btn-outline-light">Prendre un Rendez vous</a>
+                        <a href="#" class="btn btn-light rounded">Devenir Prestataire</a>
+                        <a href="#" class="btn btn-outline-light rounded">Prendre un Rendez vous</a>
                     </div>
                 </div>
                 <div class="col-md-5">
-                    <img src="path_to_image" alt="Smiling woman" class="img-fluid">
+                    <div class="hero-image"></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="container">
-        <h2 class="section-title">Qu'est-ce que MSA Afrika ?</h2>
-        <!-- Content for this section -->
+    <section class="about-section">
+        <div class="container text-center">
+            <h2>Qu'est-ce que MSA Afrika ?</h2>
+            <p>
+                MsaAda AfriKa est une plateforme en ligne qui offre une assistance routière rapide et fiable aux
+                conducteurs en difficulté en Afrique. Nous utilisons la technologie pour connecter les conducteurs avec
+                des professionnels de l'assistance en temps réel. Notre objectif est de rendre les routes plus sûres et
+                de garantir la tranquillité d'esprit des conducteurs.
+            </p>
+        </div>
     </section>
+
+    <section class="providers-section">
+        <div class="container">
+            <h2 class="section-title">Nos Prestataires</h2>
+            <div class="providers-grid">
+                <div class="provider-card">
+                    <h3>Recent Prestataires</h3>
+                    <div class="image-placeholder"></div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <div class="pagination-dots">
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <a href="#" class="btn-read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="provider-card">
+                    <h3>Recent Prestataires</h3>
+                    <div class="image-placeholder"></div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <div class="pagination-dots">
+                            <span class="dot"></span>
+                            <span class="dot active"></span>
+                            <span class="dot"></span>
+                        </div>
+                        <a href="#" class="btn-read-more">Read more</a>
+                    </div>
+                </div>
+                <div class="provider-card">
+                    <h3>Recent Prestataires</h3>
+                    <div class="image-placeholder"></div>
+                    <div class="card-content">
+                        <p>Lorem ipsum dolor sit amet consectetur</p>
+                        <div class="pagination-dots">
+                            <span class="dot"></span>
+                            <span class="dot"></span>
+                            <span class="dot active"></span>
+                        </div>
+                        <a href="#" class="btn-read-more">Read more</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="hero-sections">
+        <div class="hero-slider">
+            <div class="slide">
+                <img src="assets/img/ad1 1.png" class="" alt="Prestataire 1">
+                <div class="slide-text">
+                    <h3>CEO AFRIKA GARAGE</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur. Neque proin placerat sit feugiat eget risus pharetra sit
+                        a.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur. Neque proin placerat sit feugiat eget risus pharetra sit
+                        a.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partners-section">
+        <h2 class="section-title">Nos Partenaires</h2>
+        <div class="partners-slider">
+            <div class="partner-logo">
+                <img src="path_to_logo_1" alt="Mutualis Group">
+            </div>
+            <div class="partner-logo">
+                <img src="path_to_logo_2" alt="Msaada Afrika">
+            </div>
+            <!-- Ajoutez plus de logos selon le besoin -->
+        </div>
+    </section>
+
+    <section class="why-choose-us">
+        <h2>Pourquoi Devenir Prestataire Chez Nous?</h2>
+        <ul>
+            <li>Lorem ipsum dolor sit amet consectetur.</li>
+            <li>Neque proin placerat sit feugiat.</li>
+        </ul>
+        <form>
+            <input type="text" placeholder="Nom">
+            <input type="text" placeholder="Prénom">
+            <!-- Ajoutez plus de champs selon le besoin -->
+            <button type="submit">Soumettre</button>
+        </form>
+    </section>
+
+
+    <div class="content-wrapper">
+        <div class="row">
+            <div class="col-md-6">
+                <h3 class="text-white">Pourquoi Devenir Prestataire Chez Nous?</h3>
+                <ul class="text-white">
+                    <li>Lorem ipsum dolor sit amet consectetur.</li>
+                    <li>Neque proin placerat sit</li>
+                    <li>Feugiat eget risus pharetra sit a.</li>
+                    <li>Neque proin placerat sit</li>
+                    <li>Neque proin placerat sit</li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <div class="form-container">
+                    <form>
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Nom">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email">
+                        </div>
+                        <button type="submit" class="btn btn-submit w-100">Soumettre</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="row">
+                <div class="col-md-2 footer-links">
+                    <img src="assets/img/logo.png" alt="">
+                </div>
+                <div class="col-md-2 footer-links">
+                    <h5>A Propos</h5>
+                    <a href="#">Nos Services</a>
+                    <a href="#">Nos Services</a>
+                    <a href="#">Nos Services</a>
+                </div>
+                <div class="col-md-2 footer-links">
+                    <h5>Lien de Page</h5>
+                    <a href="#">Accueil</a>
+                    <a href="#">A Propos de Nous</a>
+                    <a href="#">Nos Prestataires</a>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Nos Services</h5>
+                    <a href="#">Nos Services</a>
+                    <a href="#">Nos Services</a>
+                    <a href="#">Nos Services</a>
+                </div>
+                <div class="col-md-3 footer-links">
+                    <h5>Nos Pages</h5>
+                    <a href="#">Follow Us</a>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                Copyright, Policy
+            </div>
+        </footer>
+
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
